@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SimpleBlog</title>
+    <title>Simple Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-    <div><%= notice %></div>
-    <div><%= alert %></div>
+  <main>
+    <div style="color: green"><%= notice %></div>
+    <div style="color: red"><%= alert %></div>
     <%= yield %>
+  </main>
   </body>
 </html>
