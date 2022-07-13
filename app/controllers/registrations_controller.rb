@@ -1,7 +1,6 @@
 class RegistrationsController < ApplicationController
   def new
-    user = User.find_by(id: session[:user_id])
-    redirect_to dashboards_path if user
+    redirect_to root_path if current_user
     @user = User.new
   end
 
